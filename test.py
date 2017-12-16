@@ -8,4 +8,4 @@ driver = webdriver.Chrome(chrome_options=chrome_options)
 # driver.save_screenshot(driver.title+".png")
 
 driver.get("https://www.baidu.com/")
-print driver.title
+print (driver.title)
