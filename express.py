@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 # phantomjs_path = r'E:\EXE\EXE\phantomjs-2.1.1-windows\bin\phantomjs'
 df = pd.DataFrame({})
 #driver = webdriver.Chrome(executable_path=r'/Users/billyshen/Documents/python_workspace/chromedriver')
-driver = webdriver.Chrome(executable_path=r'/usr/share/nginx/cy/chromedriver')
+driver = webdriver.Chrome()
 # 设定页面加载限制时间
 driver.set_page_load_timeout(15)
 driver.get('http://www.kuaidi100.com/')
