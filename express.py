@@ -4,7 +4,8 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 # phantomjs_path = r'E:\EXE\EXE\phantomjs-2.1.1-windows\bin\phantomjs'
 df = pd.DataFrame({})
-driver = webdriver.Chrome(executable_path=r'/Users/billyshen/Documents/python_workspace/chromedriver')
+#driver = webdriver.Chrome(executable_path=r'/Users/billyshen/Documents/python_workspace/chromedriver')
+driver = webdriver.Chrome(executable_path=r'/usr/share/nginx/cy/chromedriver')
 # 设定页面加载限制时间
 driver.set_page_load_timeout(15)
 driver.get('http://www.kuaidi100.com/')
@@ -32,7 +33,7 @@ for item in items:
 print(df)
 # driver.quit()
 driver.close()
-df.to_csv('/Users/billyshen/Documents/python_workspace/kuaidi100.csv')
+#df.to_csv('/Users/billyshen/Documents/python_workspace/kuaidi100.csv')
 
 
 
