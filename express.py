@@ -5,7 +5,8 @@ from bs4 import BeautifulSoup
 import sys
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8') #解决编码问题 https://www.binss.me/blog/solve-problem-of-python3-raise-unicodeencodeerror-when-print-utf8-string/
-
+shipper_code=sys.argv[1]#快递公司编号，暂时没有用到
+logistic_code=sys.argv[2]#物流单号
 # phantomjs_path = r'E:\EXE\EXE\phantomjs-2.1.1-windows\bin\phantomjs'
 df = pd.DataFrame({})
 # driver = webdriver.Chrome(executable_path=r'/Users/billyshen/Documents/python_workspace/chromedriver')
@@ -14,12 +15,12 @@ chrome_options.add_argument('headless')
 chrome_options.add_argument('no-sandbox')
 driver = webdriver.Chrome(chrome_options=chrome_options)
 # 设定页面加载限制时间
-driver.set_page_load_timeout(150)
+driver.set_page_load_timeout(30)
 driver.get('http://www.kuaidi100.com/')
 driver.find_element_by_name("postid").clear()  # 清空输入框内容
-driver.find_element_by_name("postid").send_keys('3346535929281')  # 输入订单号
+driver.find_element_by_name("postid").send_keys(logistic_code)  # 输入订单号
 driver.find_element_by_id("query").click()  # 点击搜索按钮
-time.sleep(3)
+time.sleep(1)
 content = driver.page_source.encode('utf-8')  # 获取网页内容
 soup = BeautifulSoup(content, "lxml")  # 解析网页
 
