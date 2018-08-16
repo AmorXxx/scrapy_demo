@@ -33,7 +33,7 @@ class DetailController extends ActiveController
         require_once('php_python.php');
         $request=\Yii::$app->request;
         $parms=$request->get();
-        $res = ppython("test::selenium_package_inquiry",$parms['package_id']);
+        $res = ppython("kuaidi100::selenium_package_inquiry",$parms['package_id']);
         return $res;
 
     }
