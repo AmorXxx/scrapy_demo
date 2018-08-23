@@ -1,0 +1,22 @@
+# robots.txt for kuaidi100
+# Version 4.0.1
+User-Agent: *
+Disallow: /order/
+Disallow: /api/
+Disallow: /user/
+Disallow: /include/
+Disallow: /frame/
+Disallow: /smart/
+Disallow: /wap/
+Disallow: /autonumber/
+Disallow: /apicenter/
+Disallow: /network/www/
+Disallow: /order/
+Disallow: /query
+Disallow: /courier/searchapi.do
+Disallow: /user/userapi.do
+Disallow: /company.do
+Disallow: /mobile/mobileapi.do
+Disallow: /mobile/messageapi.do
+Disallow: /mainapi.do
+Disallow: /sysapi.do
